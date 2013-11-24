@@ -3,7 +3,7 @@
 	url = git://github.com/im6e/oh-my-zsh
 [submodule ".solarized"]
 	path = .solarized
-	url = git://github.com/im6e/solarized/
+	url = git://github.com/im6e/solarized
 [submodule ".vim/bundle/neobundle.vim"]
 	path = .vim/bundle/neobundle.vim
 	url = git://github.com/Shougo/neobundle.vim

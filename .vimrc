@@ -19,6 +19,7 @@ if neobundle#exists_not_installed_bundles()
 endif
 
 " ######### plugins ########
+NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/unite.vim'
@@ -29,13 +30,11 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'szw/vim-tags'
 NeoBundle 'taichouchou2/alpaca_powertabline'
 NeoBundle 'mattn/zencoding-vim'
-NeoBundle 'taichouchou2/surround.vim'
+NeoBundle 'mattn/sonictemplate-vim'
 NeoBundle 'open-browser.vim'
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'tell-k/vim-browsereload-mac'
 NeoBundle 'hail2u/vim-css3-syntax'
-NeoBundle 'taichouchou2/html5.vim'
-NeoBundle 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim' }
 " ######################## neobundle #######################
 
 " ######################## neocomplcache #######################
@@ -180,6 +179,26 @@ let g:syntastic_javascript_checker = "jshint"
 au BufNewFile,BufRead *.php let g:vim_tags_project_tags_command = "ctags --languages=php -f ~/php.tags `pwd` 2>/dev/null &"
 " ######################## vim-tags #######################
 
+" ######################## vim-instant-markdown #######################
+let g:instant_markdown_slow = 1
+" ######################## vim-instant-markdown #######################
+
+" ######################## vim-colors-solarized #######################
+syntax enable
+" set background=light
+" colorscheme solarized
+" colorscheme desert
+" colorscheme zenburn
+" let g:solarized_termcolors=16
+" let g:solarized_termtrans=0
+" let g:solarized_degrade=0
+" let g:solarized_bold=1
+" let g:solarized_underline=1
+" let g:solarized_italic=1
+" let g:solarized_contrast='normal'
+" let g:solarized_visibility='normal'
+" ######################## vim-colors-solarized #######################
+
 set hlsearch
 set clipboard=unnamed,autoselect
 set backspace=start,eol,indent
@@ -208,29 +227,16 @@ set tags+=.tags
 set tags+=.Gemfile.lock.tags
 " +++++++++ vim-tags +++++++++ 
 
-" ++++++++ color schema ++++++++
-" colorscheme desert
-" colorscheme zenburn
-let g:solarized_termcolors=16
-let g:solarized_termtrans=0
-let g:solarized_degrade=0
-let g:solarized_bold=1
-let g:solarized_underline=1
-let g:solarized_italic=1
-let g:solarized_contrast='normal'
-let g:solarized_visibility='normal'
-syntax enable
-set background=dark
-colorscheme solarized
-" ++++++++ color schema ++++++++
-
 " ++++++++ customized emacs like key bind when it's in insert mode ++++++++
 map <C-a> <Home>
 map <C-e> <End>
+map <C-f> <Right>
+map <C-b> <Left>
 imap <C-a> <Home>
 imap <C-e> <End>
 imap <C-f> <Right>
 imap <C-b> <Left>
 imap <C-p> <Up>
 imap <C-n> <Down>
+imap <C-k> <ESC>d$i
 " ++++++++ customized emacs like key bind when it's in insert mode ++++++++

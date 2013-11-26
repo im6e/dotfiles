@@ -46,7 +46,7 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$HOME/.nodebrew/current/bin:/opt/boxen/rbenv/shims:/opt/boxen/rbenv/bin:/opt/boxen/rbenv/plugins/ruby-build/bin:node_modules/.bin:/opt/boxen/nodenv/shims:/opt/boxen/nodenv/bin:/opt/boxen/bin:/opt/boxen/homebrew/bin:/opt/boxen/homebrew/sbin:$PATH:bin:/Users/cyberagent/.pythonbrew/bin:/usr/local/heroku/bin:/Users/cyberagent/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Users/cyberagent/bin:/Users/cyberagent/.rbenv/versions/1.9.3-p194/bin
+export PATH=$HOME/.nodebrew/current/bin:/opt/boxen/rbenv/shims:/opt/boxen/rbenv/bin:/opt/boxen/rbenv/plugins/ruby-build/bin:node_modules/.bin:/opt/boxen/nodenv/shims:/opt/boxen/nodenv/bin:/opt/boxen/bin:/opt/boxen/homebrew/bin:/opt/boxen/homebrew/sbin:$PATH:bin:${HOME}/.pythonbrew/bin:/usr/local/heroku/bin:${HOME}/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:${HOME}/bin:${HOME}/.rbenv/versions/1.9.3-p194/bin
 
 # Vim keybind
 # bindkey -v

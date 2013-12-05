@@ -15,3 +15,5 @@ Thumbs.db
 
 # ignore vim plugins installed by NeoBundle
 .vim/bundle
+
+.netrwhist

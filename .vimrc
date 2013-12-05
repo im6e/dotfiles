@@ -172,7 +172,7 @@ let g:jscomplete_use = ['dom', 'moz', 'es6th']
 " ######################## jscomplete-vim #######################
 
 " ######################## syntastic #######################
-let g:syntastic_javascript_checker = "jshint"
+let g:syntastic_javascript_checkers = ['jshint']
 " ######################## syntastic #######################
 
 " ######################## vim-tags #######################

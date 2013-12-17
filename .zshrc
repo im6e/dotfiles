@@ -46,7 +46,7 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/bin:${HOME}/.rbenv/shims:$HOME/.nodebrew/current/bin:/opt/boxen/rbenv/shims:/opt/boxen/rbenv/bin:/opt/boxen/rbenv/plugins/ruby-build/bin:node_modules/.bin:/opt/boxen/nodenv/shims:/opt/boxen/nodenv/bin:/opt/boxen/bin:/opt/boxen/homebrew/bin:/opt/boxen/homebrew/sbin:$PATH:bin:${HOME}/.pythonbrew/bin:/usr/local/heroku/bin:${HOME}/.rbenv/shims:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:${HOME}/bin:${HOME}/.rbenv/versions/1.9.3-p194/bin
+export PATH=${HOME}/.rbenv/shims:/usr/local/bin:$HOME/.nodebrew/current/bin:/opt/boxen/rbenv/shims:/opt/boxen/rbenv/bin:/opt/boxen/rbenv/plugins/ruby-build/bin:node_modules/.bin:/opt/boxen/nodenv/shims:/opt/boxen/nodenv/bin:/opt/boxen/bin:/opt/boxen/homebrew/bin:/opt/boxen/homebrew/sbin:$PATH:bin:${HOME}/.pythonbrew/bin:/usr/local/heroku/bin:${HOME}/.rbenv/shims:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:${HOME}/bin:${HOME}/.rbenv/versions/1.9.3-p194/bin
 export LANG=ja_JP.UTF-8
 
 # Vim keybind
@@ -56,6 +56,9 @@ if [ -f /Applications/MacVim.app/Contents/MacOS/Vim ]; then
   alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
   alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 fi
+
+# Off autocomplete
+unsetopt correct_all
 
 ################### tmux ###################
 if [ -z "$TMUX" -a -z "$STY" ]; then

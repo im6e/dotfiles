@@ -14,6 +14,7 @@ install zsh
 install gdbm
 install mysql
 install phantomjs
+install readline
 install reattach-to-user-namespace
 install tmux
 install gradle

@@ -25,7 +25,6 @@ NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimfiler'
 NeoBundle 'jelera/vim-javascript-syntax'
-NeoBundle 'teramako/jscomplete-vim'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'szw/vim-tags'
 NeoBundle 'taichouchou2/alpaca_powertabline'
@@ -35,6 +34,7 @@ NeoBundle 'open-browser.vim'
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'tell-k/vim-browsereload-mac'
 NeoBundle 'hail2u/vim-css3-syntax'
+NeoBundle 'digitaltoad/vim-jade'
 " ######################## neobundle #######################
 
 " ######################## neocomplcache #######################

@@ -20,6 +20,7 @@ do
   [ $f = ".gitmodules" ] && continue
   [ $f = ".solarized" ] && continue
   [ $f = "bootstrap.sh" ] && continue
+  [ $f = "Brewfile" ] && continue
   ln -snf ${DIR}/$f ~/
 done
 

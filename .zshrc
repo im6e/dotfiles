@@ -48,6 +48,12 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH=${HOME}/.rbenv/shims:/usr/local/bin:$HOME/.nodebrew/current/bin:/opt/boxen/rbenv/shims:/opt/boxen/rbenv/bin:/opt/boxen/rbenv/plugins/ruby-build/bin:node_modules/.bin:/opt/boxen/nodenv/shims:/opt/boxen/nodenv/bin:/opt/boxen/bin:/opt/boxen/homebrew/bin:/opt/boxen/homebrew/sbin:$PATH:bin:${HOME}/.pythonbrew/bin:/usr/local/heroku/bin:${HOME}/.rbenv/shims:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:${HOME}/bin:${HOME}/.rbenv/versions/1.9.3-p194/bin
 export LANG=ja_JP.UTF-8
+# for go lang
+if [ -x "`which go`" ]; then
+  export GOROOT=/usr/local/opt/go/libexec
+  export GOPATH=$HOME/playground/go
+  export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+fi
 
 # Vim keybind
 # bindkey -v

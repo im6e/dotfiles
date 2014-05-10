@@ -25,6 +25,7 @@ NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimfiler'
 NeoBundle 'jelera/vim-javascript-syntax'
+" NeoBundle 'teramako/jscomplete-vim'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'szw/vim-tags'
 NeoBundle 'taichouchou2/alpaca_powertabline'
@@ -35,6 +36,10 @@ NeoBundle 'mattn/webapi-vim'
 NeoBundle 'tell-k/vim-browsereload-mac'
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'digitaltoad/vim-jade'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'claco/jasmine.vim'
+NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'Blackrush/vim-gocode'
 " ######################## neobundle #######################
 
 " ######################## neocomplcache #######################
@@ -198,6 +203,40 @@ syntax enable
 " let g:solarized_contrast='normal'
 " let g:solarized_visibility='normal'
 " ######################## vim-colors-solarized #######################
+
+" ######################## vim-coffee-script #######################
+" vimにcoffeeファイルタイプを認識させる
+au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
+" インデントを設定
+autocmd FileType coffee     setlocal sw=2 sts=2 ts=2 et
+" 保存時にコンパイル
+" autocmd BufWritePost *.coffee silent CoffeeMake! -cb | cwindow | redraw!
+" ######################## vim-coffee-script #######################
+
+" ######################## jasmine.vim #######################
+" ファイルタイプを変更
+function! JasmineSetting()
+  au BufRead,BufNewFile *Helper.js,*Spec.js  set filetype=jasmine.javascript
+  au BufRead,BufNewFile *Helper.coffee,*Spec.coffee  set filetype=jasmine.coffee
+  au BufRead,BufNewFile,BufReadPre *Helper.coffee,*Spec.coffee  let b:quickrun_config = {'type' : 'coffee'}
+  call jasmine#load_snippets()
+  map <buffer> <leader>m :JasmineRedGreen<CR>
+  command! JasmineRedGreen :call jasmine#redgreen()
+  command! JasmineMake :call jasmine#make()
+endfunction
+au BufRead,BufNewFile,BufReadPre *.coffee,*.js call JasmineSetting()
+" ######################## jasmine.vim #######################
+
+" ######################## vim-gocode #######################
+" gocode
+set rtp+=$GOROOT/misc/vim
+"golint
+exe "set rtp+=" . globpath($GOPATH, "src/github.com/golang/lint/misc/vim")
+
+"" Go
+filetype plugin indent on
+syntax on
+" ######################## vim-gocode #######################
 
 set hlsearch
 set clipboard=unnamed,autoselect
